@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mi Pan Sususu Miau Miau Miau Troll 🐱🍞</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+:root{--pink:#ff82c3;--purple:#8b5cf6;--ink:#573167;--cream:#fff7ec}
+*{box-sizing:border-box}html,body{min-height:100%;margin:0}body{font-family:'Fredoka',system-ui,sans-serif;background:radial-gradient(circle at 12% 15%,#fffbd7,transparent 28%),radial-gradient(circle at 88% 18%,#ffd1ea,transparent 35%),linear-gradient(135deg,#ffe1f0,#e9d8ff 55%,#d2f9ff);color:var(--ink);overflow-x:hidden}
+body:before{content:'✦   ♡   ✧   ★   ♡   ✦   ♡   ✧';position:fixed;top:15px;left:0;right:0;text-align:center;letter-spacing:22px;color:#fff;opacity:.7;pointer-events:none}
+.wrap{min-height:100svh;display:grid;place-items:center;padding:70px 20px 55px}.card{width:min(100%,700px);padding:35px 25px 30px;border-radius:36px;background:#ffffffb8;border:3px solid #fff;box-shadow:0 22px 65px #8f62b744;text-align:center;backdrop-filter:blur(10px);position:relative}
+.pill{display:inline-block;padding:8px 17px;border-radius:50px;background:#fff0fa;color:#e34d9f;font-size:14px;font-weight:700;letter-spacing:2px}.cat{font-size:clamp(80px,16vw,135px);filter:drop-shadow(0 12px 0 #ffafda55);animation:bounce 2.2s ease-in-out infinite;line-height:1.4;user-select:none;cursor:pointer}h1{font-size:clamp(31px,6.3vw,57px);line-height:1.08;letter-spacing:-1.5px;margin:4px auto 13px;max-width:560px;color:#ba4da9;text-shadow:3px 3px #fff}h1 span{color:#f68d51}.subtitle{font-size:clamp(15px,2.8vw,20px);margin:0 auto 20px;max-width:470px;color:#78557f}.buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:28px 0 20px}button{font:700 17px 'Fredoka',system-ui;cursor:pointer;border:0;border-radius:18px;padding:15px 22px;box-shadow:0 7px 0 #a970a144;transition:transform .13s,box-shadow .13s}button:hover{transform:translateY(-3px) rotate(-2deg)}button:active{transform:translateY(4px);box-shadow:0 2px 0 #a970a144}.primary{background:#ff81c2;color:#fff}.second{background:#b29aff;color:#fff}.third{background:#ffe18d;color:#845d25}.display{min-height:85px;background:#fff8fe;border:2px dashed #f3b9e0;border-radius:23px;padding:20px 14px;display:grid;place-items:center;font-size:clamp(18px,3vw,25px);font-weight:700;overflow-wrap:anywhere}.count{font-size:14px;margin-top:16px;opacity:.7}.floating{position:fixed;font-size:29px;pointer-events:none;animation:float 7s linear infinite;opacity:.7}.f1{left:7%;top:30%;animation-delay:-2s}.f2{right:7%;top:65%;animation-delay:-4s}.f3{left:14%;bottom:8%;animation-delay:-1s}.f4{right:14%;top:10%;animation-delay:-5s}.rain{position:fixed;top:-35px;pointer-events:none;z-index:100;animation:fall 2.6s ease-in forwards}.footer{margin-top:18px;font-size:13px;color:#a879a6} @keyframes bounce{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(4deg)}}@keyframes float{0%,100%{transform:translateY(0) rotate(-10deg)}50%{transform:translateY(-27px) rotate(12deg)}}@keyframes fall{to{transform:translateY(110vh) rotate(600deg);opacity:0}}@media(max-width:550px){.card{padding:25px 17px}.buttons{flex-direction:column}button{width:100%}}
+</style>
+</head>
+<body>
+<div class="floating f1">🍞</div><div class="floating f2">💗</div><div class="floating f3">✨</div><div class="floating f4">🐾</div>
+<main class="wrap"><section class="card"><div class="pill">✧ MODO UWU ACTIVADO ✧</div><div class="cat" id="cat" title="¡Tocame!">🐱🍞</div><h1>MI PAN <span>SUSUSU</span><br>MIAU MIAU MIAU <span>TROLL</span></h1><p class="subtitle">Bienvenid@ al rincón más sospechosamente kawaii del internet ฅ^•ﻌ•^ฅ</p><div class="buttons"><button class="primary" id="miau">🐾 MIAU MIAU</button><button class="second" id="pan">🍞 INVOCAR PAN</button><button class="third" id="troll">😈 MODO TROLL</button></div><div class="display" id="display" aria-live="polite">✨ Apretá un botón, uwu ✨</div><div class="count">Miaus acumulados: <strong id="count">0</strong> 💖</div><div class="footer">Hecho con amor, pan y cero neuronas 🐈</div></section></main>
+<script>
+const display=document.getElementById('display');const count=document.getElementById('count');const cat=document.getElementById('cat');let miaus=0;const phrases=['MIAU MIAU MIAUUUU 😻','SUSUSUSU 🍞✨','UWU ¿ME DAS UN PAN? 🥺','El michi controla esta página 🐱','MIAU TROLL NIVEL 999 💀','ÑAM ÑAM PAN CON MIAU 💗'];
+function rain(emoji,n=18){for(let i=0;i<n;i++){const el=document.createElement('div');el.className='rain';el.textContent=emoji;el.style.left=Math.random()*100+'vw';el.style.fontSize=(20+Math.random()*30)+'px';el.style.animationDelay=Math.random()*.65+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),3500)}}
+function show(t){display.textContent=t}
+function meow(){miaus++;count.textContent=miaus;show(phrases[Math.floor(Math.random()*phrases.length)]);rain('🐾',9)}
+document.getElementById('miau').addEventListener('click',meow);cat.addEventListener('click',meow);
+document.getElementById('pan').addEventListener('click',()=>{show('🍞 ¡EL PAN SUPREMO HA SIDO INVOCADO! 🍞');rain('🍞',24)});
+document.getElementById('troll').addEventListener('click',()=>{show('😈 JAJAJA CAÍSTE EN EL TROLLEO UWU 😈');rain('😹',22);cat.textContent=cat.textContent==='😼🍞'?'🐱🍞':'😼🍞';document.querySelector('.card').animate([{transform:'rotate(-2deg)'},{transform:'rotate(2deg)'},{transform:'rotate(0)'}],{duration:380,iterations:2})});
+</script>
+</body>
+</html>
